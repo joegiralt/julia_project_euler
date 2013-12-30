@@ -6,6 +6,7 @@ score_hash   = {}
 
 
 #finds, parses, alphabetize file to an array
+beginning  =  Time.now
 File.open('names.txt', 'r') do |file_line|
   while line = file_line.gets
     line.split(",").each do |name|
@@ -33,7 +34,12 @@ name_array.each_with_index do |name, index|
   end
 end
 
+the_end= Time.now
+total_run_time = the_end - beginning
+
+p "The total run time is #{total_run_time} seconds"
 p "The answer for problem 22 is: #{name_scores.reduce(:+)}"
+
 
 
 
