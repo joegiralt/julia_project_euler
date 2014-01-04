@@ -28,8 +28,8 @@ end
 
 @abundant_nums = find_abundant_nums(13..20161)
 
-@answer = [1..23]
-(24..20161).each do |num|
+@answer = (1..23).to_a
+24.upto.20161 do |num|
   found = false
   @abundant_nums.each do |ab_num|
     if @abundant_nums.include?(num - ab_num)
