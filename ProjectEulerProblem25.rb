@@ -1,8 +1,14 @@
+the_beginning = Time.now
     
 fib_sequence = [1,1]
 while fib_sequence.last.to_s.length < 1000
   fib_sequence << fib_sequence[-1] + fib_sequence[-2] 
 end
+
+the_end= Time.now
+total_run_time = the_end - the_beginning
+
+p "The total run time is #{total_run_time} seconds"
 puts fib_sequence.length
 
 
